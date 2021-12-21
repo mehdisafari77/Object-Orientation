@@ -1,35 +1,24 @@
 //////////////////////////// PROBLEM 1 ////////////////////////////
-/*
-  Create an object called me.
-  Give it a key of name with the value being your name, and another key of age with the value being your age.
-*/
-
-//Code here
-
+let me = {
+  name: "Mehdi",
+  age: 23
+}
 
 
 //////////////////////////// PROBLEM 2 ////////////////////////////
-
-//Create an object saved to the variable dog.
-//The dog object should have the following properties:
-//name (a string), color (a string), age (a number),
-//and goodBoy/goodGirl (a boolean).
-
-//Code here
-
-
+let dog = {
+  name: "Alex",
+  color: "Golden",
+  age: 2,
+  goodBoy: true
+}
 
 //////////////////////////// PROBLEM 3 ////////////////////////////
-/* Print out the name of the dog you created in problem 2 using dot-notation. */
-
-//Code here
-
-
+console.log(dog.name)
 
 //////////////////////////// PROBLEM 4 ////////////////////////////
-/* Print out the color of the dog you created in problem 2 using bracket-notation. */
+console.log(dog['color'])
 
-//Code here
 
 
 
