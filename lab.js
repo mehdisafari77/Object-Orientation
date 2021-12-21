@@ -19,100 +19,55 @@ console.log(dog.name)
 //////////////////////////// PROBLEM 4 ////////////////////////////
 console.log(dog['color'])
 
-
-
-
 //////////////////////////// PROBLEM 5 ////////////////////////////
-/*
-  Make a 'favoriteThings' object that contains the following keys: band, food, person, book, movie, holiday.
-  Have the values to those keys be strings that are equal to your favorite thing in that category.
-*/
+let favoriteThings = {
+  band: "The Black Eyed Peas",
+  food: "Pasta",
+  person: "Elon Musk",
+  book: "Harry Potter",
+  movie: "Taken",
+  holiday: "London"
+}
 
-//Code here
-
-
-/*
-  After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car and then another key named 'show' with the value being your favorite show.
-*/
-
-//Code here
+favoriteThings["car"] = "Toyota"
+favoriteThings["brand"] = "Apple"
 
 
-/*
-  Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
-  and change the value of the book key in your favoriteThings object to be 'Harry Potter'. (If they were either of those things already, change them to something else.)
-*/
+favoriteThings["food"] = "Cacio e Pepe"
+favoriteThings.book = "The Great Hatsby"
 
-//Code here
-
+console.log(favoriteThings)
 
 //////////////////////////// PROBLEM 6 ////////////////////////////
-
-// Do not edit the code below.
 var carDetails = {
   color: 'red',
   make: 'toyota',
   model: 'tacoma',
   year: 1994
 }
-// Do not edit the code above.
-
-/*
-  Use object destructuring to save the property values from the object carDetails into new variables. 
-*/
-
-//Code Here
-
-
+// const {color, make, model, year} = car
 
 //////////////////////////// PROBLEM 7 ////////////////////////////
-
-/*
-  In the function below named greeting, it is receiving an object as a parameter. 
-  Use object destructuring to save the object properties to new variables. 
-  The property names are firstName, lastName, and title.
-*/
-
 function greeting( obj ) {
-  //Code Here
-  
-  // Do not edit the code below.
+  const {title, firstName, lastName} = obj
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
-  // Do not edit the code above.
+}
+
+//////////////////////////// PROBLEM 8 ////////////////////////////
+function totalPopulation(obj) {
+  const {utah, california, texas, arizona} = obj
+  return utah + california + texas + arizona
 }
 
 
-
-//////////////////////////// PROBLEM 8 ////////////////////////////
-
-/*
-  Write a function called totalPopulation that will take in an object.
-  That object will have 4 properties named utah, california, texas and arizona.
-  The property values will be numbers.
-  Use object destructuring to save the property values to new variables.
-  Sum up the values and return the total number.
-*/
-
-//Code Here
-
-
-
 //////////////////////////// PROBLEM 9 ////////////////////////////
-
-/*
-  Write a function called ingredients that will take in an object. 
-  This object will have 3 properties named carb, fat, and protein. 
-  The property values will be strings. 
-  Use object destructuring to save the property values to new variables. 
-  Push these new variables to an array and return the array. 
-*/
-
-//Code Here
-
+function ingredients(obj) {
+  const {carb, fat, protein} = obj
+  return [carb, fat, protein]
+}
 
 
 //////////////////////////// PROBLEM 10 ////////////////////////////
-// Do not edit the code below.
 var user = {
   name: 'Bryan',
   age: 24,
@@ -121,45 +76,46 @@ var user = {
   birthday: '05/02/1990',
   username: 'bryansmith33'
 };
-// Do not edit the code above.
 
-/*
-  Let's say I, the user, decided to change my name and email address to the following:
-  name -> 'Bryan G. Smith' and email -> 'bryan.smith@devmounta.in'.
-  Make that change without modifying the original object code above.
-*/
-
-//Code Here
-
+user.name = "Bryan G. Smith"
+user.email = "bryan.smith@devmounta.in"
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
-/*
-  Using the user object above, delete the users age off of the object.
-*/
+delete user.age
+console.log(user)
 
-//Code Here
 
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
-/*
-  Create a class called 'Cat'. Make sure to call your constructor, and require these 3 parameters: name, age, color.
-  Outside of your class, create an instance of your cat, passing in whatever values you would like.
-  Print the name of your cat instance using dot notation.
-*/
+class Cat {
+  constructor(name, age, color) {
+    this.name = name
+    this.age = age
+    this.color = color
+  }
+}
 
-//Code here
+const thunder = new Cat('Thunder', 3, 'black & brown')
 
+console.log(thunder.name)
 
 
 //////////////////////////// PROBLEM 13 ////////////////////////////
-/*
-  Create a class called 'Wizard'. Make sure to call your constructor, and require these 3 parameters: name, age, favoriteSpell.
-  Add a function to your Wizard class called castSpell. This function should print "{name} has cast {favoriteSpell}"
-  Outside of your class, create an instance of your Wizard, passing in whatever values you would like.
-  Call the castSpell function on the instance of your wizard.
-*/
+class Wizard {
+  constructor(name, age, favoriteSpell) {
+    this.name = name
+    this.age = age
+    this.favoriteSpell = favoriteSpell
+  }
 
-//Code here
+  castSpell() {
+    console.log(`${this.name} has cast ${this.favoriteSpell}`)
+  }
+}
+
+const ron = new Wizard('Ron', 11, 'Eat slugs, Malfoy')
+
+ron.castSpell()
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
